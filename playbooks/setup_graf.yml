@@ -1,0 +1,16 @@
+---
+- hosts: all
+  user: pi
+  become: yes
+  become_user: root
+  become_method: sudo
+  roles:
+    - node_exporter
+
+- hosts: master
+  user: pi
+  become: yes
+  become_user: root
+  become_method: sudo
+  roles:
+    - monitoring_server 

@@ -1,0 +1,5 @@
+---
+# handlers file for rpi_exporter
+- name: Reload systemd
+  command: systemctl daemon-reload
+  listen: systemd_reload
