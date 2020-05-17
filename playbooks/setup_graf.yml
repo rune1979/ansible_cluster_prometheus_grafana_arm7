@@ -6,7 +6,7 @@
   become_method: sudo
   roles:
     - node_exporter
-
+    - rpi_exporter
 - hosts: master
   user: pi
   become: yes
