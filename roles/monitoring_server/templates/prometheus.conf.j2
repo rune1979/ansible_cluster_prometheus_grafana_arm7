@@ -29,7 +29,7 @@ scrape_configs:
     - targets: ['localhost:9090']
 
 {% for host in groups['all'] %}
-#{% set ip_address = hostvars[host]['ansible_host'] %}
+{% set ip_address = hostvars[host]['ansible_host'] %}
   - job_name: '{{ host }}'
 
     # metrics_path defaults to '/metrics'
@@ -37,7 +37,7 @@ scrape_configs:
 
     static_configs:
     - targets:
-      - '{{ host }}:9243'
-      - '{{ host }}:9100'
+      - '{{ ip_address }}:9243'
+      - '{{ ip_address }}:9100'
 
 {% endfor %}

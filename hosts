@@ -17,12 +17,12 @@
 
 # Ex 2: A collection of hosts belonging to the 'webservers' group
 [master]
-raspberrypi1.local
+raspberrypi1.local ansible_host=192.168.68.121
 [slave]
-raspberrypi2.local
-raspberrypi3.local
-raspberrypi4.local
-raspberrypi5.local
+raspberrypi2.local ansible_host=192.168.68.122
+raspberrypi3.local ansible_host=192.168.68.123
+raspberrypi4.local ansible_host=192.168.68.124
+raspberrypi5.local ansible_host=192.168.68.125
 
 #[webservers]
 #alpha.example.org
